@@ -234,6 +234,7 @@ def finalise_citation(bib):
 	target_dir = os.path.join(path, year)
 	found = False
 	extension = os.path.splitext(filepath)[1].lower()
+	if not len(extension): extension = "pdf"
 	for letter in gen_letters():
 		citation_key = author + year + letter
 		target_filename = os.path.join(target_dir, citation_key + extension)
